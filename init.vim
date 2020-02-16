@@ -11,8 +11,15 @@ Plug 'junegunn/fzf.vim'
 Plug 'tomtom/tcomment_vim'
 call plug#end()
 
+" tabstop:          Width of tab character
+" softtabstop:      Fine tunes the amount of white space to be added
+" shiftwidth        Determines the amount of whitespace to add in normal mode
+" expandtab:        When on uses space instead of tabs
+set tabstop     =4
+set softtabstop =4
+set shiftwidth  =4
+set expandtab
 
-set rtp+=set rtp+=~/.fzf
 syntax on
 colorscheme onedark
 set number
@@ -20,6 +27,9 @@ set number
 " add dots to whitespace
 set listchars+=space:·
 set list
+
+" FZF finder
+set rtp+=set rtp+=~/.fzf
 
 " NerdTree activation shortcut
 nmap <F6> :NERDTreeToggle<CR>
