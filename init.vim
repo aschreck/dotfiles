@@ -8,6 +8,8 @@ Plug 'leafgarland/typescript-vim'
 Plug 'jiangmiao/auto-pairs' 
 Plug 'mattn/emmet-vim'
 Plug 'junegunn/fzf.vim'
+" Needs to be mapped to the location of fzf
+Plug '/usr/local/opt/fzf'
 Plug 'tomtom/tcomment_vim'
 call plug#end()
 
@@ -27,11 +29,14 @@ colorscheme onedark
 set number
 
 " add dots to whitespace
-set listchars+=space:·
+"set listchars+=space:·
 set list
 
+" Change to normal mode on focus loss
+au FocusLost,TabLeave * call feedkeys("\<C-\>\<C-n>")
+
 " FZF finder
-set rtp+=set rtp+=~/.fzf
+set rtp+=set rtp+=~/usr/local/bin/fzf
 
 " NerdTree activation shortcut
 nmap <F6> :NERDTreeToggle<CR>
