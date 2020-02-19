@@ -5,12 +5,15 @@ Plug 'tpope/vim-eunuch'
 Plug 'airblade/vim-gitgutter'
 Plug 'preservim/nerdtree'
 Plug 'leafgarland/typescript-vim'
+Plug 'Quramy/tsuquyomi'
 Plug 'jiangmiao/auto-pairs' 
 Plug 'mattn/emmet-vim'
 Plug 'junegunn/fzf.vim'
 " Needs to be mapped to the location of fzf
 Plug '/usr/local/opt/fzf'
 Plug 'tomtom/tcomment_vim'
+" Color Theme
+Plug 'kaicataldo/material.vim'
 call plug#end()
 
 " tabstop:          Width of tab character
@@ -29,7 +32,14 @@ autocmd FocusLost * call feedkeys("\<esc>")
 :au FocusLost * :wa
 
 syntax on
-colorscheme onedark
+if (has('termguicolors'))
+  set termguicolors
+endif
+"colorscheme onedark
+" options are: 'default' | 'palenight' | 'ocean' | 'lighter' | 'darker'
+let g:material_terminal_italics = 1
+let g:material_theme_style = 'palenight'
+colorscheme material
 set number
 
 " add dots to whitespace
