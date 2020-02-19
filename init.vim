@@ -38,7 +38,7 @@ endif
 "colorscheme onedark
 " options are: 'default' | 'palenight' | 'ocean' | 'lighter' | 'darker'
 let g:material_terminal_italics = 1
-let g:material_theme_style = 'palenight'
+let g:material_theme_style = 'darker'
 colorscheme material
 set number
 
