@@ -21,6 +21,10 @@ set shiftwidth  =2
 set expandtab
 
 set autoread
+"
+" normal mode and save on focus change
+autocmd FocusLost * call feedkeys("\<esc>")
+:au FocusLost * :wa
 
 syntax on
 colorscheme onedark
