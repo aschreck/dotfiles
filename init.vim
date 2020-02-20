@@ -9,11 +9,13 @@ Plug 'Quramy/tsuquyomi'
 Plug 'jiangmiao/auto-pairs' 
 Plug 'mattn/emmet-vim'
 Plug 'junegunn/fzf.vim'
-" Needs to be mapped to the location of fzf
-Plug '/usr/local/opt/fzf'
+"Needs to be mapped to the location of fzf
+Plug '/home/aaronschreck/.fzf/bin/fzf'
 Plug 'tomtom/tcomment_vim'
 " Color Theme
 Plug 'kaicataldo/material.vim'
+"vertical line indent
+Plug 'Yggdroot/indentLine'
 call plug#end()
 
 " tabstop:          Width of tab character
@@ -50,7 +52,10 @@ set list
 au FocusLost,TabLeave * call feedkeys("\<C-\>\<C-n>")
 
 " FZF finder
-set rtp+=set rtp+=~/usr/local/bin/fzf
+" on mac:
+" set rtp+=set rtp+=~/usr/local/bin/fzf
+" on linux:
+set rtp+=set rtp+=~/.fzf
 
 " NerdTree activation shortcut
 nmap <F6> :NERDTreeToggle<CR>
